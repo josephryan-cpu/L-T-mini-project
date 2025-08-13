@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Favorite City — Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="A travel blog celebrating the attractions, culture, and hidden corners of my favorite city." />
+</head>
+<body>
+  
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="Home">My Favorite City</a>
+  <input id="nav-toggle" type="checkbox" aria-label="Toggle navigation">
+  <label for="nav-toggle" class="hamburger" aria-hidden="true">☰</label>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="attractions.html">Attractions</a>
+    <a href="culture.html">Culture</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+  <main>
+    <section class="hero" role="banner" aria-label="City hero">
+      <div class="hero-inner">
+        <h1>My Favorite City</h1>
+        <p>Sunrise walks, bustling markets, and stories on every street.</p>
+        <a class="btn btn-primary" href="attractions.html">Explore Top Spots</a>
+      </div>
+    </section>
+
+    <section class="New York City" aria-labelledby="featured-heading">
+      <h2 id="featured-heading">New York City</h2>
+      <article class="card featured">
+        <img src="images\skyline.jpg" alt="Skyline at golden hour">
+        <div class="card-body">
+          <h3>48 Hours in the Heart of New York City</h3>
+          <p>There's no time like the present to plan a trip to New York City, with its constant energy and endless supply of sights, attractions and activities. Don't wait—a second spent in NYC is just too valuable to miss, here's a perfect weekend itinerary.</p>
+          <a class="btn btn-ghost" href="culture.html">Read more</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="Hidden Gems" aria-labelledby="recent-heading">
+      <h2 id="recent-heading">Hidden Gems</h2>
+      <div class="grid grid-3">
+        
+        <article class="card">
+          <img src="images\city highlight 1.png" alt="City highlight 1">
+          <div class="card-body">
+            <h3>Forest Hills Gardens, Queens</h3>
+            <p>A picturesque neighborhood built in 1910 that mimics an English village with Tudor-style homes and a charming town center—truly feels like a slice of the UK tucked into NYC .</p>
+            <a class="btn btn-link" href="attractions.html">Discover</a>
+          </div>
+        </article>
+        
+        <article class="card">
+          <img src="images\city highlight 2.jpg" alt="City highlight 2">
+          <div class="card-body">
+            <h3>Stone Street, Financial District</h3>
+            <p>A historic cobblestone street dating back to 1658, offering a beautiful, European-feel enclave lined with outdoor cafes and street-side dining .</p>
+            <a class="btn btn-link" href="attractions.html">Discover</a>
+          </div>
+        </article>
+        
+        <article class="card">
+          <img src="images\city highlight 3.jpg" alt="City highlight 3">
+          <div class="card-body">
+            <h3>Chinese Scholars Garden, Snug Harbor (Staten Island)</h3>
+            <p>A serene, elegant Chinese garden nestled within Snug Harbor’s cultural complex—unexpected tranquility amid NYC’s bustle .</p>
+            <a class="btn btn-link" href="attractions.html">Discover</a>
+          </div>
+        </article>
+        
+        <article class="card">
+          <img src="images\city highlight 4.jpg" alt="City highlight 4">
+          <div class="card-body">
+            <h3>Old City Hall Subway Station</h3>
+            <p>A disused early-20th-century subway station beneath City Hall with stunning Guastavino-tiled vaults and Romanesque–Revival architecture, now a beautiful ghost of the past .
+
+</p>
+            <a class="btn btn-link" href="attractions.html">Discover</a>
+          </div>
+        </article>
+        
+        <article class="card">
+          <img src="images\city highlight 5.jpg" alt="City highlight 5">
+          <div class="card-body">
+            <h3>Sniffen Court Historic District</h3>
+            <p>These close-up, atmospheric shots bring to life the narrow, cobblestone lane flanked by historic red-brick carriage houses—once stables, now private homes steeped in charm, complete with sculptural touches and lush greenery .</p>
+            <a class="btn btn-link" href="attractions.html">Discover</a>
+          </div>
+        </article>
+        
+        <article class="card">
+          <img src="images\city highlight 6.jpg" alt="City highlight 6">
+          <div class="card-body">
+            <h3>Elizabeth Street Garden</h3>
+            <p>Tucked between the brick facades of Nolita, this one-acre sculptural garden is an intimate, art-filled sanctuary. Winding gravel paths lead past salvaged architectural elements, statues, wrought-iron seating, and a copper gazebo—making it feel like a hidden, romantic escape within the cityscape. </p>
+            <a class="btn btn-link" href="attractions.html">Discover</a>
+          </div>
+        </article>
+        
+      </div>
+    </section>
+  </main>
+  
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h4>About This Blog</h4>
+      <p>Stories, places, and culture of a city I love—curated with care.</p>
+    </div>
+    <div>
+      <h4>Follow</h4>
+      <ul class="social">
+        <li><a href="#" aria-label="Instagram">Instagram</a></li>
+        <li><a href="#" aria-label="Twitter">Twitter/X</a></li>
+        <li><a href="#" aria-label="YouTube">YouTube</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Newsletter</h4>
+      <form class="newsletter" action="#" method="post">
+        <label for="email">Get updates:</label>
+        <input id="email" type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <p class="copyright">© <span id="year"></span> My Favorite City — Built with HTML & CSS</p>
+</footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  // Active nav link
+  const path = location.pathname.split('/').pop();
+  document.querySelectorAll('.nav a').forEach(a=>{
+    if(a.getAttribute('href') === path){ a.classList.add('active'); }
+  });
+</script>
+
+</body>
+</html>

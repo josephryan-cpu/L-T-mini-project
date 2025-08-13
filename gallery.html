@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Favorite City — Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="Home">My Favorite City</a>
+  <input id="nav-toggle" type="checkbox" aria-label="Toggle navigation">
+  <label for="nav-toggle" class="hamburger" aria-hidden="true">☰</label>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="attractions.html">Attractions</a>
+    <a href="culture.html">Culture</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+  <main class="page">
+    <header class="page-header">
+      <h1>Photo Gallery</h1>
+      <p>A mosaic of moments—architecture, food, and fleeting light.</p>
+    </header>
+    <section class="gallery-grid" aria-label="Image gallery">
+      <figure><img src="images\g1.jpg" alt="Gallery image 1"><figcaption></figcaption></figure><figure><img src="images\g2.jpg" alt="Gallery image 2"><figcaption></figcaption></figure><figure><img src="images\g3.jpg" alt="Gallery image 3"><figcaption></figcaption></figure><figure><img src="images\g4.jpg" alt="Gallery image 4"><figcaption></figcaption></figure><figure><img src="images\g5.jpg" alt="Gallery image 5"><figcaption></figcaption></figure><figure><img src="images\g6.jpg" alt="Gallery image 6"><figcaption></figcaption></figure><figure><img src="images\g7.webp" alt="Gallery image 7"><figcaption></figcaption></figure><figure><img src="images\g8.webp" alt="Gallery image 8"><figcaption></figcaption></figure><figure><img src="images\g9.jpg" alt="Gallery image 9"><figcaption></figcaption></figure><figure><img src="images\at8.webp" alt="Gallery image 10"><figcaption></figcaption></figure><figure><img src="images\g11.jpeg" alt="Gallery image 11"><figcaption></figcaption></figure><figure><img src="images\g12.jpg" alt="Gallery image 12"><figcaption></figcaption></figure>
+    </section>
+  </main>
+  
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h4>About This Blog</h4>
+      <p>Stories, places, and culture of a city I love—curated with care.</p>
+    </div>
+    <div>
+      <h4>Follow</h4>
+      <ul class="social">
+        <li><a href="#" aria-label="Instagram">Instagram</a></li>
+        <li><a href="#" aria-label="Twitter">Twitter/X</a></li>
+        <li><a href="#" aria-label="YouTube">YouTube</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Newsletter</h4>
+      <form class="newsletter" action="#" method="post">
+        <label for="email">Get updates:</label>
+        <input id="email" type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <p class="copyright">© <span id="year"></span> My Favorite City — Built with HTML & CSS</p>
+</footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  // Active nav link
+  const path = location.pathname.split('/').pop();
+  document.querySelectorAll('.nav a').forEach(a=>{
+    if(a.getAttribute('href') === path){ a.classList.add('active'); }
+  });
+</script>
+
+</body>
+</html>
