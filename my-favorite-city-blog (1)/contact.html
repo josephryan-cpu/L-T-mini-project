@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Favorite City — Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="Home">My Favorite City</a>
+  <input id="nav-toggle" type="checkbox" aria-label="Toggle navigation">
+  <label for="nav-toggle" class="hamburger" aria-hidden="true">☰</label>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="attractions.html">Attractions</a>
+    <a href="culture.html">Culture</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+  <main class="page">
+    <header class="page-header">
+      <h1>Contact</h1>
+      <p>Questions, tips, or collaboration ideas? Send a note.</p>
+    </header>
+
+    <form class="contact-form" action="#" method="post">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+
+      <label for="subject">Subject</label>
+      <input id="subject" name="subject" type="text">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button class="btn btn-primary" type="submit">Send Message</button>
+    </form>
+
+    <aside class="map" aria-label="Map placeholder">
+      <img src="images/map.jpg" alt="Map placeholder">
+    </aside>
+  </main>
+  
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h4>About This Blog</h4>
+      <p>Stories, places, and culture of a city I love—curated with care.</p>
+    </div>
+    <div>
+      <h4>Follow</h4>
+      <ul class="social">
+        <li><a href="#" aria-label="Instagram">Instagram</a></li>
+        <li><a href="#" aria-label="Twitter">Twitter/X</a></li>
+        <li><a href="#" aria-label="YouTube">YouTube</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Newsletter</h4>
+      <form class="newsletter" action="#" method="post">
+        <label for="email">Get updates:</label>
+        <input id="email" type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <p class="copyright">© <span id="year"></span> My Favorite City — Built with HTML & CSS</p>
+</footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  // Active nav link
+  const path = location.pathname.split('/').pop();
+  document.querySelectorAll('.nav a').forEach(a=>{
+    if(a.getAttribute('href') === path){ a.classList.add('active'); }
+  });
+</script>
+
+</body>
+</html>

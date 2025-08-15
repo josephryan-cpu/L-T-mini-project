@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Favorite City — Attractions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="Home">My Favorite City</a>
+  <input id="nav-toggle" type="checkbox" aria-label="Toggle navigation">
+  <label for="nav-toggle" class="hamburger" aria-hidden="true">☰</label>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="attractions.html">Attractions</a>
+    <a href="culture.html">Culture</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+  <main class="page">
+    <header class="page-header">
+      <h1>Top Attractions</h1>
+      <p>Must-see places with a mix of icons and local favorites.</p>
+    </header>
+    <section class="filters" aria-label="Filters">
+      <button class="chip" aria-pressed="false">Historic</button>
+      <button class="chip" aria-pressed="false">Nature</button>
+      <button class="chip" aria-pressed="false">Food</button>
+      <button class="chip" aria-pressed="false">Markets</button>
+    </section>
+    <section class="grid grid-3">
+      
+      <article class="card attraction">
+        <img src="images\at 1.jpg" alt="Attraction photo 1">
+        <div class="card-body">
+          <h3>Statue of Liberty</h3>
+          <p> A symbol of freedom and America's warm welcome, standing tall on Liberty Island.</p>
+          <a class="btn btn-ghost" href="#">View on Map</a>
+        </div>
+      </article>
+      
+      <article class="card attraction">
+        <img src="images\at2.webp" alt="Attraction photo 2">
+        <div class="card-body">
+          <h3>The Vessel at Hudson Yards </h3>
+          <p>A striking honeycomb-like climbing structure offering unique city views.</p>
+          <a class="btn btn-ghost" href="#">View on Map</a>
+        </div>
+      </article>
+      
+      <article class="card attraction">
+        <img src="images\at 3.jpg" alt="Attraction photo 3">
+        <div class="card-body">
+          <h3>Times Square</h3>
+          <p>The electric heart of NYC, buzzing with neon lights, theaters, and nonstop energy.</p>
+          <a class="btn btn-ghost" href="#">View on Map</a>
+        </div>
+      </article>
+      
+      <article class="card attraction">
+        <img src="images\at 4.jpg" alt="Attraction photo 4">
+        <div class="card-body">
+          <h3>Brooklyn Bridge</h3>
+          <p>The timeless Gothic-arch bridge connecting Manhattan and Brooklyn, perfect for scenic walks.</p>
+          <a class="btn btn-ghost" href="#">View on Map</a>
+        </div>
+      </article>
+      
+      <article class="card attraction">
+        <img src="images\at 5.jpg" alt="Attraction photo 5">
+        <div class="card-body">
+          <h3>Aerial view of Manhattan & Central Park </h3>
+          <p> A breathtaking skyline panorama showcasing the city’s iconic layout and green heart. </p>
+          <a class="btn btn-ghost" href="#">View on Map</a>
+        </div>
+      </article>
+      
+      <article class="card attraction">
+        <img src="images\at 6.avif" alt="Attraction photo 6">
+        <div class="card-body">
+          <h3>One World Observatory / The Edge</h3>
+          <p> Sky-high observation decks offering panoramic views across Manhattan and beyond. </p>
+          <a class="btn btn-ghost" href="#">View on Map</a>
+        </div>
+      </article>
+      
+      <article class="card attraction">
+        <img src="images\at 7.jpg" alt="Attraction photo 7">
+        <div class="card-body">
+          <h3>Empire State Building Viewfinder</h3>
+          <p> A classic peek through binoculars toward one of the world's most famous skyscrapers. </p>
+          <a class="btn btn-ghost" href="#">View on Map</a>
+        </div>
+      </article>
+      
+      <article class="card attraction">
+        <img src="images\at8.webp" alt="Attraction photo 8">
+        <div class="card-body">
+          <h3>Belvedere Castle, Central Park</h3>
+          <p>A fairytale-like lookout in Central Park offering sweeping views of the park and city skyline.</p>
+          <a class="btn btn-ghost" href="#">View on Map</a>
+        </div>
+      </article>
+      
+      <article class="card attraction">
+        <img src="images\at 9.jpg" alt="Attraction photo 9">
+        <div class="card-body">
+          <h3>Little Island at Pier 55</h3>
+          <p> A floating park on the Hudson River with gardens, paths, and stunning waterfront vistas.</p>
+          <a class="btn btn-ghost" href="#">View on Map</a>
+        </div>
+      </article>
+      
+    </section>
+  </main>
+  
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h4>About This Blog</h4>
+      <p>Stories, places, and culture of a city I love—curated with care.</p>
+    </div>
+    <div>
+      <h4>Follow</h4>
+      <ul class="social">
+        <li><a href="#" aria-label="Instagram">Instagram</a></li>
+        <li><a href="#" aria-label="Twitter">Twitter/X</a></li>
+        <li><a href="#" aria-label="YouTube">YouTube</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Newsletter</h4>
+      <form class="newsletter" action="#" method="post">
+        <label for="email">Get updates:</label>
+        <input id="email" type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <p class="copyright">© <span id="year"></span> My Favorite City — Built with HTML & CSS</p>
+</footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  // Active nav link
+  const path = location.pathname.split('/').pop();
+  document.querySelectorAll('.nav a').forEach(a=>{
+    if(a.getAttribute('href') === path){ a.classList.add('active'); }
+  });
+</script>
+
+</body>
+</html>
